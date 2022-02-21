@@ -1,0 +1,10 @@
+{
+  "quotes": ["error", "double"],
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended"],
+  "jsRules": {},
+  "rules": {
+    "quotes": [2, "single", { "avoidEscape": true }]
+  },
+  "rulesDirectory": []
+}
