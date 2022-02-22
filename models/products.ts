@@ -1,4 +1,7 @@
-import { Schema, model, Model } from "mongoose";
+import { Document, Model, model, Schema } from "mongoose";
+import { Product } from "../types/product";
+
+export default interface ProductsModel extends Product, Document {}
 
 const productsSchema: Schema = new Schema({
   name: { type: String, required: true },
@@ -8,7 +11,7 @@ const productsSchema: Schema = new Schema({
 });
 
 //type?
-export const productsModel: Model<typeof productsSchema> = model(
+export const productsModel: Model<ProductsModel> = model<ProductsModel>(
   "Product",
   productsSchema
 );
